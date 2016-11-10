@@ -1,3 +1,0 @@
---recursive
---require ./config/babelhook
---require ./test/setup.js
