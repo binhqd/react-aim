@@ -1,18 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const DASHBOARD_PORT = 3011;
 
 module.exports = {
   context: __dirname,
   devtool: 'inline-source-map',
   entry: {
     app: [
-      './index.js'
+      './index.js',
+      './assets/global.css'
     ]
   },
   output: {
@@ -50,13 +48,8 @@ module.exports = {
           presets: ['es2015', 'react', 'stage-2']
         }
       }, {
-        test: /\.(scss|css)$/,
-        include: /components\/partials\//,
-        loader: ExtractTextPlugin.extract("style", "css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap")
-      }, {
-        test: /\.(scss|css)$/,
-        exclude: /components\/partials\//,
-        loader: ExtractTextPlugin.extract("style", "css?sourceMap&modules&importLoaders=1&localIdentName=[local]!postcss!sass?sourceMap")
+        test: /\.(css)$/,
+        loader: "style-loader!css-loader"
       }
     ]
   },
