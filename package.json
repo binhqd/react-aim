@@ -3,11 +3,7 @@
   "version": "0.0.1",
   "description": "React Boilerplate",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
-    "start": "superstatic build -p ${PORT:-3000} --host 0.0.0.0 --gzip -c '{\"rewrites\": [{\"source\":\"**\",\"destination\":\"index.html\"}],\"headers\":[{\"source\":\"**\",\"headers\":[{\"key\":\"Cache-Control\",\"value\":\"max-age=86400\"}]}]}'",
-    "test": "cross-env NODE_ENV=test istanbul cover --dir ./coverage --report lcov ./node_modules/.bin/mocha-webpack -- --require ./config/babelhook --opts config/mocha-webpack.opts",
-    "test:watch": "npm test -- --watch",
-    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress"
   },
   "repository": {
     "type": "git",
