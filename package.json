@@ -1,0 +1,71 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "React Boilerplate",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "start": "superstatic build -p ${PORT:-3000} --host 0.0.0.0 --gzip -c '{\"rewrites\": [{\"source\":\"**\",\"destination\":\"index.html\"}],\"headers\":[{\"source\":\"**\",\"headers\":[{\"key\":\"Cache-Control\",\"value\":\"max-age=86400\"}]}]}'",
+    "test": "cross-env NODE_ENV=test istanbul cover --dir ./coverage --report lcov ./node_modules/.bin/mocha-webpack -- --require ./config/babelhook --opts config/mocha-webpack.opts",
+    "test:watch": "npm test -- --watch",
+    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs/redux.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reactjs/redux/issues"
+  },
+  "homepage": "http://redux.js.org",
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015-minimal": "^2.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-standalone": "^6.7.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "multi-level-menu": "git+https://binhqdgreenglobal@bitbucket.org/binhqdgreenglobal/multilevel-menu.git",
+    "node-sass": "3.4.2",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "sass-loader": "^3.2.0",
+    "transfer-webpack-plugin": "^0.1.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-register": "^6.3.13",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.6.1",
+    "eslint-plugin-react": "^6.3.0",
+    "exports-loader": "^0.6.3",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "gh-pages": "^0.11.0",
+    "html-loader": "^0.4.0",
+    "html-webpack-plugin": "^2.15.0",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "node-libs-browser": "^0.5.2",
+    "path-alias": "0.0.7",
+    "raw-loader": "^0.5.1",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.2.3",
+    "style-loader": "^0.12.3",
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.9.1",
+    "webpack-node-externals": "^1.2.0"
+  }
+}
