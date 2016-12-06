@@ -2,6 +2,7 @@ import React from 'react';
 
 class App extends React.Component {
   constructor(props, context) {
+    super(props, context);
     this.state = {
       text: 'Hello World!'
     };
@@ -19,7 +20,7 @@ class App extends React.Component {
         <div className={this.foo == 'foo' ? 'foo' : 'bar'}>
           {this.state.text}
         </div>
-        <button value="Click here" onClick={this.handleClick.bind(this)}
+        <button onClick={this.handleClick.bind(this)}>Click here</button>
       </div>
     );
   }
