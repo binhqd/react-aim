@@ -22,7 +22,6 @@
     "babel-preset-stage-2": "^6.13.0",
     "babel-standalone": "^6.7.4",
     "extract-text-webpack-plugin": "^1.0.1",
-    "multi-level-menu": "git+https://binhqdgreenglobal@bitbucket.org/binhqdgreenglobal/multilevel-menu.git",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "transfer-webpack-plugin": "^0.1.4"
