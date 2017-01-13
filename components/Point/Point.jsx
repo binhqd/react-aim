@@ -6,9 +6,9 @@ class Point extends React.Component {
 
     const point = {
       position: 'absolute',
-      width: 15,
-      height: 15,
-      background: '#000',
+      width: this.props.width,
+      height: this.props.height,
+      background: this.props.defaultColor,
       left: this.props.left,
       top: this.props.top
     };
@@ -33,7 +33,7 @@ class Point extends React.Component {
   restore() {
     const point = {
       ...this.state.point,
-      background: '#000'
+      background: this.props.defaultColor
     };
     this.setState({point});
   }
@@ -46,6 +46,12 @@ class Point extends React.Component {
       </div>
     );
   }
+}
+
+Point.defaultProps = {
+  width: 15,
+  height: 15,
+  defaultColor: '#000'
 }
 
 
